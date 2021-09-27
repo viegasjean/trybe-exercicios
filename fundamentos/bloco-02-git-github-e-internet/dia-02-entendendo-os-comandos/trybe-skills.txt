@@ -4,3 +4,9 @@ O que eu vou aprender na Trybe:
 - Bash
 - GitJavascript
 Logica de Programação
+
+- Unix
+- Bash
+- Git
+- HTML
+- CSS
