@@ -56,5 +56,3 @@ if (a + b + b === 180) {
 } else {
     console.log("triangulo invalido")
 }
-
-//peças de xadrez
