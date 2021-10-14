@@ -1,0 +1,32 @@
+body{
+    font-size: 16px;
+  }
+
+  h1 {
+    size: 65px;
+    color: orange;
+    font-family: sans-serif;
+  }
+
+  .background-pink {
+    background-color: plum;
+  }
+
+  p {
+    font-weight: 600;
+    font-size: 3em;
+    font-style: italic;
+    line-height: 5px;
+    text-decoration: peru;
+  }
+  .red-text {
+    color: red;
+  }
+
+  .yellow-text{
+    color: yellow;  
+  }
+
+  .brown-text{
+    color: brown;
+  }
