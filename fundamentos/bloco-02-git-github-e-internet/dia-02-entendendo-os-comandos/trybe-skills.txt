@@ -2,13 +2,9 @@ O que eu vou aprender na Trybe:
 
 - Unix
 - Bash
-
+- GitJavascript
+- Logica de Programação
 - Git
-
-- Git
-
-O que eu vou aprender na Trybe:
-
 - Unix
 - Bash
 - Git
