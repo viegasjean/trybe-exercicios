@@ -1,9 +1,9 @@
-let n = 5
+let n = 14
 
 
-for(i = 1; i <= n; i++){
+for(i = 1; i <= n; i+=2){
   let line = ""
-  for(j = n - i; j >= 1; j--){ 
+  for(j = (n - i)/2; j >= 1; j--){ 
     line += " "
   }
   for(j = 1; j <= i; j++){ 
