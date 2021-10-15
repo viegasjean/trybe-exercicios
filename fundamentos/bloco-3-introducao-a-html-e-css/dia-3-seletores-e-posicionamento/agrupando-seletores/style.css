@@ -1,0 +1,13 @@
+h1, p {
+    text-align: center;
+}
+
+li:hover{
+    background-color: black;
+    color: blanchedalmond;
+}
+
+li:active{
+    font-family: fantasy;
+    color: brown;
+}
