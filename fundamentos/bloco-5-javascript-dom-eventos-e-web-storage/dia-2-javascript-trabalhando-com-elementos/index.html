@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang='pt-br'>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // COLOQUE SEU CÓDIGO AQUI
+      // Seleciona body
+      let body = document.querySelector('body')
+
+      // cria h1 e adiciona texto
+      let h1 = document.createElement('h1')
+      h1.innerText = 'Exercício 5.2 - JavaScript DOM'
+      h1.className = 'title'
+
+      // insere h1 no html
+      body.appendChild(h1)
+
+      // Cria tag main
+      let main = document.createElement('main');
+      main.className = 'main-content';
+
+      // Insere main no html
+      body.appendChild(main);
+
+      let sectionCenter = document.createElement('section');
+      sectionCenter.className = 'center-content';
+
+      main.appendChild(sectionCenter);
+
+      let p = document.createElement('p');
+      p.innerText = 'Algum texto'
+      sectionCenter.appendChild(p)
+
+      let sectionLeft = document.createElement('section');
+      sectionLeft.className = 'left-content';
+      main.appendChild(sectionLeft);
+
+      let sectionRight = document.createElement('section');
+      sectionRight.className = 'right-content';
+      main.appendChild(sectionRight);
+
+      let img = document.createElement('img');
+      img.src = 'https://picsum.photos/200'
+      img.className = 'small-image'
+
+      sectionLeft.appendChild(img);
+
+      let ol = document.createElement('ol');
+      sectionRight.appendChild(ol)
+      
+     
+
+      let numExtenso = ['um', 'dois', 'tres', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez']
+
+      for (num of numExtenso){
+        let li = document.createElement('li');
+        li.innerText = num;
+        ol.appendChild(li);
+      }
+
+      for(let i = 0; i < 3; i += 1){
+        let h3 = document.createElement('h3');
+        main.appendChild(h3)
+        h3.className = 'description'
+      }
+
+      main.removeChild(sectionLeft)
+
+      sectionCenter.parentElement.style.backgroundColor = 'green'
+
+      let li2 = document.querySelector('li')
+      ol.removeChild(li)
+ 
+
+
+
+
+
+
+    </script>
+  </body>
+</html>
