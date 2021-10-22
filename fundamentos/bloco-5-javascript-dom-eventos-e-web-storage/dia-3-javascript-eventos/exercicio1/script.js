@@ -88,3 +88,54 @@ function pintaFriday(){
     }
   }
 }
+
+function zoomDays(){
+  for (let d of day){
+    d.addEventListener('mouseover', zoomOver)
+    d.addEventListener('mouseout', zoomOut)
+  }
+  function zoomOver(e){
+    e.target.style.fontSize =  '50px'
+  }
+  function zoomOut(e){
+    e.target.style.fontSize =  '20px'
+  }
+}
+
+zoomDays()
+
+const myTasks = document.querySelector('.my-tasks')
+
+function newTask(tarefa){
+  let novaTarefa = document.createElement('span');
+  novaTarefa.innerText = tarefa;
+  myTasks.appendChild(novaTarefa)
+}
+
+function taskColor(cor) {
+  let novaDiv = document.createElement('div')
+  novaDiv.style.backgroundColor = cor
+  novaDiv.className = 'task'
+  myTasks.appendChild(novaDiv)
+} 
+
+newTask('cozinhar')
+taskColor('blue')
+
+
+const tasks = document.querySelectorAll('.task')
+
+function selecionaTarefa(){
+  for (let task of tasks){
+    task.addEventListener('click', seleciona)
+    function seleciona(){
+      if (task.className == 'task selected'){
+        task.className = 'task'
+      } else {
+        task.className = 'task selected'
+      }
+    }
+    
+  }
+}
+selecionaTarefa()
