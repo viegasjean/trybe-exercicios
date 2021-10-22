@@ -18,12 +18,16 @@ const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 
 
 const days = document.getElementById('days')
 
-for (d of dezDaysList){
-  let day = document.createElement('li');
-  day.innerText = d;
-  day.className = 'day'
-  days.appendChild(day)
+function addDays(){
+  for (d of dezDaysList){
+    let day = document.createElement('li');
+    day.innerText = d;
+    day.className = 'day'
+    days.appendChild(day)
+  }
 }
+
+addDays();
 
 const day = document.querySelectorAll('.day')
 
@@ -34,10 +38,53 @@ for (let i = 5; i < day.length; i +=7) {
 const hollydays = [24, 25, 31]
 
 for (d of day){
-  console.log(d)
   for (h of hollydays){
     if (h == d.innerText){
       d.className = 'day hollyday'
+    }
+  }
+}
+
+const buttonsContainer = document.querySelector('.buttons-container')
+
+function addButton(buttonName){
+  let btn = document.createElement('button');
+  btn.id = 'btn-' + buttonName.toLowerCase();
+  btn.innerText = buttonName
+  buttonsContainer.appendChild(btn)
+}
+
+addButton('Feriados')
+
+const btnFeriados = document.getElementById('btn-feriados')
+const feriados = document.querySelectorAll('.hollyday')
+
+btnFeriados.addEventListener('click', pintaFeriado)
+
+function pintaFeriado(){
+  for (let feriado of feriados){
+    if (feriado.style.color == 'red'){
+      feriado.style.color = '#777'
+    } else {
+       feriado.style.color = 'red'
+    }
+  }
+}
+
+addButton('Friday')
+const btnFriday = document.getElementById('btn-friday')
+
+btnFriday.addEventListener('click', pintaFriday)
+let fridays = document.getElementsByClassName('friday')
+let fridayDays = [];
+function pintaFriday(){
+  for (let i in fridays){
+    
+    if (fridays[i].innerText == 'S'){
+      fridays[i].innerText = fridayDays[i]
+    } else {
+      fridayDays.push(fridays[i].innerText)
+      fridays[i].innerText = 'S'
     }
   }
 }
