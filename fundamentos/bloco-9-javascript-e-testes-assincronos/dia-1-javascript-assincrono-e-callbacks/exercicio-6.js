@@ -22,7 +22,6 @@ const handleError = (errorReason) =>
 const sendMarsTemperature = (callback, fail) => {
   setTimeout(() => {
     const successRate = Math.random() >= 0.6 // Taxa de sucesso de 60%
-    callback(getMarsTemperature())
     if (successRate){
       callback(getMarsTemperature())
     } else {
